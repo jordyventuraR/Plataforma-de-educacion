@@ -1,0 +1,262 @@
+
+#TODO: LoginScreen
+<LoginScreen>:
+    FloatLayout:
+        canvas.before: 
+            Color:
+                rgba: 97/255, 222/255, 97/255, 0.68  # Azul
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        
+        Label:
+            text: 'Clases de Mate'
+            font_size: 36
+            color: 198/255, 218/255, 198/255, 0.68  # Rojo
+            pos: 500, 600
+            text_size: self.size  # Centra el texto dentro del Label
+
+        TextInput:
+            id: username
+            hint_text: "Username"
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 550
+
+        TextInput:
+            id: pasword
+            hint_text: "Password"
+            password: True
+            password_mask: "*"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 500  
+            
+        Button:
+            id: sigin
+            text: 'iniciar sesion'
+            background_color: 108/255, 96/255, 102/255, 0.8  # Verde
+            font_size: 14
+            size_hint: None, None
+            width: 150
+            height: 50
+            pos: 575, 400
+            on_press: root.sigin_press() 
+            
+        Button:
+            id: login
+            text: 'Crear cuenta'
+            background_color: 108/255, 96/255, 102/255, 0.8  # Verde
+            font_size: 14
+            size_hint: None, None
+            width: 150
+            height: 50
+            pos : 575, 350
+            on_press: root.login_press()
+            
+#TODO: Dashboard
+<DashBoard>:
+    FloatLayout:
+        orientation: 'vertical'
+        text:'class Math'
+        canvas.before: 
+            Color:
+                rgba: 97/255, 222/255, 97/255, 0.68  # Azul
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: 'Welcome'
+            font_size: 36
+            color: 198/255, 218/255, 198/255, 0.68  # Rojo
+            pos: 500, 600
+            text_size: self.size  # Centra el texto dentro del Label
+#TODO: Registro
+<Registro>:
+    FloatLayout:
+        orientation: 'vertical'
+        text:'class Math'
+        canvas.before: 
+            Color:
+                rgba: 97/255, 222/255, 97/255, 0.68  # Azul
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: 'Registro'
+            font_size: 36
+            color: 198/255, 218/255, 198/255, 0.68  # Rojo
+            pos: 500, 600
+            text_size: self.size  # Centra el texto dentro del Label
+
+        TextInput:
+            id: username
+            hint_text: "Nombre de usuario"
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 550
+
+        TextInput:
+            id: email
+            hint_text: "Correo electronico"
+            password: True
+            password_mask: "*"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 500
+
+        TextInput:
+            id: pasword
+            hint_text: "Password"
+            password: True
+            password_mask: "*"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 450
+
+        TextInput:
+            id: confim_pasword
+            hint_text: "Confirmar Password"
+            password: True
+            password_mask: "*"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 400
+
+        Button:
+            id: registrar
+            text: 'Registrarse'
+            background_color: 108/255, 96/255, 102/255, 0.8  # Verde
+            font_size: 14
+            size_hint: None, None
+            width: 150
+            height: 50
+            pos : 575, 300
+            on_press: root.on_register_button_press()
+#TODO: RecuperacionPassword
+<RecuperacionPassword>:
+    FloatLayout:
+        orientation: 'vertical'
+        text:'class Math'
+        canvas.before: 
+            Color:
+                rgba: 97/255, 222/255, 97/255, 0.68  # Azul
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text: 'Recuperar password'
+            font_size: 36
+            color: 198/255, 218/255, 198/255, 0.68  # Rojo
+            pos: 500, 600
+            text_size: self.size  # Centra el texto dentro del Label
+
+        TextInput:
+            id: username
+            hint_text: "Username"
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 550
+
+        TextInput:
+            id: email
+            hint_text: "correo electronico"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 500
+
+        Button:
+            id: recuperar_pass
+            text: 'Recuperar password'
+            background_color: 108/255, 96/255, 102/255, 0.8  # Verde
+            font_size: 14
+            size_hint: None, None
+            width: 150
+            height: 50
+            pos: 575, 400
+            on_press: root.on_recpass_button_press()
+#TODO: NuevoPassword
+<NuevoPassword>:
+    FloatLayout:
+        orientation: 'vertical'
+        text:'class Math'
+        canvas.before: 
+            Color:
+                rgba: 97/255, 222/255, 97/255, 0.68  # Azul
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: 'Nuevo password'
+            font_size: 36
+            color: 198/255, 218/255, 198/255, 0.68  # Rojo
+            pos: 500, 600
+            text_size: self.size  # Centra el texto dentro del Label
+
+        TextInput:
+            id: verificacion_email
+            hint_text: "codigo del correo electronico"
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 550
+
+        TextInput:
+            id: new_pass
+            hint_text: "nuevo password"
+            password: True
+            password_mask: "*"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 500
+
+        TextInput:
+            id: confim_pass
+            hint_text: "Confirmar password"
+            password: True
+            password_mask: "*"
+            multiline: False
+            font_size: 16
+            size_hint: None, None
+            width: 300
+            height: 40
+            pos: 500, 450
+
+        Button:
+            id: acept_cambios
+            text: 'aceptar cambios'
+            background_color: 108/255, 96/255, 102/255, 0.8  # Verde
+            font_size: 14
+            size_hint: None, None
+            width: 150
+            height: 50
+            pos: 575, 300
+            on_press: root.on_aceptCambios_button_press()
